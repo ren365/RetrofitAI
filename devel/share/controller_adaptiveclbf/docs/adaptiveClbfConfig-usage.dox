@@ -1,0 +1,56 @@
+\subsubsection usage Usage
+\verbatim
+<node name="controller_adaptiveclbf" pkg="controller_adaptiveclbf" type="controller_adaptiveclbf">
+  <param name="enable" type="bool" value="True" />
+  <param name="vehicle_length" type="double" value="0.4" />
+  <param name="steering_limit" type="double" value="0.5" />
+  <param name="scale_acceleration" type="double" value="0.0" />
+  <param name="acceleration_deadband" type="double" value="3.0" />
+  <param name="acceleration_gain" type="double" value="8.0" />
+  <param name="max_accel" type="double" value="4.0" />
+  <param name="min_accel" type="double" value="-4.0" />
+  <param name="rate" type="double" value="50.0" />
+  <param name="learning_verbose" type="bool" value="False" />
+  <param name="use_model" type="bool" value="False" />
+  <param name="add_data" type="bool" value="True" />
+  <param name="check_model" type="bool" value="True" />
+  <param name="model_train" type="bool" value="True" />
+  <param name="measurement_noise" type="double" value="40.0" />
+  <param name="N_data" type="int" value="50000" />
+  <param name="N_updates" type="int" value="50" />
+  <param name="meta_batch_size" type="int" value="50" />
+  <param name="data_horizon" type="int" value="20" />
+  <param name="test_horizon" type="int" value="30" />
+  <param name="min_datapoints" type="int" value="500" />
+  <param name="save_data_interval" type="int" value="10000" />
+  <param name="learning_rate" type="double" value="0.001" />
+  <param name="reverse_velocity_goal" type="bool" value="False" />
+  <param name="use_qp" type="bool" value="True" />
+  <param name="desired_vel" type="double" value="0.0" />
+  <param name="verbose" type="bool" value="False" />
+  <param name="kp_z" type="double" value="1.0" />
+  <param name="kd_z" type="double" value="1.0" />
+  <param name="max_error" type="double" value="10.0" />
+  <param name="kp_goal" type="double" value="-1.0" />
+  <param name="clf_epsilon" type="double" value="100.0" />
+  <param name="qp_u_cost" type="double" value="100.0" />
+  <param name="qp_u_prev_cost" type="double" value="0.0" />
+  <param name="qp_p1_cost" type="double" value="1.0" />
+  <param name="qp_p2_cost" type="double" value="1e+12" />
+  <param name="qp_ksig" type="double" value="1.0" />
+  <param name="qp_max_var" type="double" value="1.0" />
+  <param name="qp_verbose" type="bool" value="False" />
+  <param name="use_barrier_vel" type="bool" value="True" />
+  <param name="max_velocity" type="double" value="5.0" />
+  <param name="min_velocity" type="double" value="0.0" />
+  <param name="barrier_vel_gamma" type="double" value="100.0" />
+  <param name="use_barrier_pointcloud" type="bool" value="False" />
+  <param name="barrier_radius" type="double" value="0.4" />
+  <param name="barrier_radius_velocity_scale" type="double" value="0.2" />
+  <param name="barrier_pc_gamma_p" type="double" value="1.0" />
+  <param name="barrier_pc_gamma" type="double" value="10.0" />
+  <param name="barrier_max_distance" type="double" value="3.0" />
+  <param name="barrier_resolution" type="double" value="0.1" />
+</node>
+\endverbatim
+

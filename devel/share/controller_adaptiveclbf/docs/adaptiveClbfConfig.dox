@@ -1,0 +1,55 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~enable" : \b [bool] Enable node operation. min: False, default: True, max: True
+- \b "~vehicle_length" : \b [double] Vehicle Length (m) min: 0.01, default: 0.4, max: 5.0
+- \b "~steering_limit" : \b [double] Steering Limit (?) min: 0.0, default: 0.5, max: 2.0
+- \b "~scale_acceleration" : \b [double] Desired velocity gain times output acceleration. min: 0.0, default: 0.0, max: 100.0
+- \b "~acceleration_deadband" : \b [double] Current control deadband. min: 0.0, default: 3.0, max: 100.0
+- \b "~acceleration_gain" : \b [double] Desired acceleration gain to current. min: 0.0, default: 8.0, max: 100.0
+- \b "~max_accel" : \b [double] Max Acceleration (N) min: -50.0, default: 4.0, max: 50.0
+- \b "~min_accel" : \b [double] Min Acceleration (N) min: -50.0, default: -4.0, max: 50.0
+- \b "~rate" : \b [double] Controller Rate (Hz) min: 0.1, default: 50.0, max: 100.0
+- \b "~learning_verbose" : \b [bool] Enable Learning verbose mode min: False, default: False, max: True
+- \b "~use_model" : \b [bool] Use learned model in adaptive controller min: False, default: False, max: True
+- \b "~add_data" : \b [bool] Whether or not to record data for training min: False, default: True, max: True
+- \b "~check_model" : \b [bool] Compute training loss online min: False, default: True, max: True
+- \b "~model_train" : \b [bool] Train model in adaptive controller min: False, default: True, max: True
+- \b "~measurement_noise" : \b [double] Prior on noise for model, how much to trust model min: 0.0, default: 40.0, max: 100.0
+- \b "~N_data" : \b [int] Number of datapoints to save min: 1, default: 50000, max: 100000
+- \b "~N_updates" : \b [int] Number of training updates min: 1, default: 50, max: 50000
+- \b "~meta_batch_size" : \b [int] Meta-batch size min: 1, default: 50, max: 1000
+- \b "~data_horizon" : \b [int] Number of context data points min: 1, default: 20, max: 1000
+- \b "~test_horizon" : \b [int] Number of test data points min: 1, default: 30, max: 1000
+- \b "~min_datapoints" : \b [int] Minimum number of data points before training min: 1, default: 500, max: 100000
+- \b "~save_data_interval" : \b [int] Interval at which to save data min: 1, default: 10000, max: 10000000
+- \b "~learning_rate" : \b [double] Learning rate min: 0.0, default: 0.001, max: 10.0
+- \b "~reverse_velocity_goal" : \b [bool] Reverse desired velocity if vehicle stops. min: False, default: False, max: True
+- \b "~use_qp" : \b [bool] Use qp to optimize for controls min: False, default: True, max: True
+- \b "~desired_vel" : \b [double] Desired velocity at goal min: -100.0, default: 0.0, max: 100.0
+- \b "~verbose" : \b [bool] Enable Controller Verbose mode min: False, default: False, max: True
+- \b "~kp_z" : \b [double] Position Gain min: 0.0, default: 1.0, max: 100.0
+- \b "~kd_z" : \b [double] Velocity Gain min: 0.0, default: 1.0, max: 100.0
+- \b "~max_error" : \b [double] clip pd error min: 0.0, default: 10.0, max: 1000.0
+- \b "~kp_goal" : \b [double] Set desired velocity proportional to distance to goal (<0 to disable) min: -1.0, default: -1.0, max: 10.0
+- \b "~clf_epsilon" : \b [double] CLF Epsilon Convergence Factor min: 0.001, default: 100.0, max: 10000.0
+- \b "~qp_u_cost" : \b [double] QP Controls Cost min: 0.0, default: 100.0, max: 10000000000.0
+- \b "~qp_u_prev_cost" : \b [double] QP Controls Smoothing Cost min: 0.0, default: 0.0, max: 10000000000.0
+- \b "~qp_p1_cost" : \b [double] QP Lyapunov Slack Cost min: 0.0, default: 1.0, max: 1e+12
+- \b "~qp_p2_cost" : \b [double] QP Barrier Slack Cost min: 0.0, default: 1e+12, max: 1e+12
+- \b "~qp_ksig" : \b [double] QP k_sigma Safety factor min: 0.0, default: 1.0, max: 10000000000.0
+- \b "~qp_max_var" : \b [double] QP Max Variance for sigDelta min: 0.0, default: 1.0, max: 100.0
+- \b "~qp_verbose" : \b [bool] Enable QP Verbose mode min: False, default: False, max: True
+- \b "~use_barrier_vel" : \b [bool] CBF for Velocity Enable/Disable min: False, default: True, max: True
+- \b "~max_velocity" : \b [double] CBF Barrier for Max Velocity min: -100.0, default: 5.0, max: 100.0
+- \b "~min_velocity" : \b [double] CBF Barrier for Min Velocity min: -100.0, default: 0.0, max: 100.0
+- \b "~barrier_vel_gamma" : \b [double] CBF Barrier gamma for Velocity min: 0.0, default: 100.0, max: 10000.0
+- \b "~use_barrier_pointcloud" : \b [bool] CBF for Points on pointcloud Enable/Disable min: False, default: False, max: True
+- \b "~barrier_radius" : \b [double] CBF Barrier for pointcloud, min radius min: -10.0, default: 0.4, max: 100.0
+- \b "~barrier_radius_velocity_scale" : \b [double] CBF Barrier for pointcloud, scale radius by velocity min: -10.0, default: 0.2, max: 100.0
+- \b "~barrier_pc_gamma_p" : \b [double] CBF Barrier for pointcloud, gamma_p min: 0.0, default: 1.0, max: 10000.0
+- \b "~barrier_pc_gamma" : \b [double] CBF Barrier for pointcloud, gamma min: 0.0, default: 10.0, max: 10000.0
+- \b "~barrier_max_distance" : \b [double] CBF Barrier max distance min: 0.0, default: 3.0, max: 100.0
+- \b "~barrier_resolution" : \b [double] CBF Barrier resolution min: 0.0, default: 0.1, max: 10.0
+

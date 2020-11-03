@@ -1,0 +1,13 @@
+\subsubsection usage Usage
+\verbatim
+<node name="controller_adaptiveclbf" pkg="controller_adaptiveclbf" type="controller_adaptiveclbf">
+  <param name="enable" type="bool" value="False" />
+  <param name="width" type="double" value="5.0" />
+  <param name="height" type="double" value="5.0" />
+  <param name="speed" type="double" value="1.5" />
+  <param name="freq" type="double" value="0.25" />
+  <param name="x_offset" type="double" value="7.0" />
+  <param name="y_offset" type="double" value="0.0" />
+</node>
+\endverbatim
+

@@ -1,0 +1,25 @@
+<package format="2">
+  <name>controller_adaptiveclbf</name>
+  <version>0.0.1</version>
+  <description>
+    Controller for Ackermann steered vehicles which adapts to model uncertainty and maintains safety and stability
+  </description>
+  <author>David D. Fan</author>
+  <maintainer email="david.fan@gmail.com">David D. Fan</maintainer>
+  <license>BSD</license>
+  <url>git@bitbucket.org:ddfan/controller_adaptiveclbf.git</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>actionlib_msgs</exec_depend>
+
+  <depend>dynamic_reconfigure</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>ackermann_msgs</depend>
+
+</package>

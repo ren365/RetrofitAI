@@ -433,12 +433,12 @@ class AdaptiveClbf(object):
 		mu_d = mu_rm + mu_pd - mu_ad
 		self.mu_qp = np.zeros((int(self.xdim/2),1))
 		if use_qp:
-			# self.mu_qp = self.qpsolve.solve(self.z,self.z_ref,mu_d,sigDelta)
-			self.mu_new = self.qpsolve.solve(self.z,self.z_ref,mu_d,np.ones((int(self.xdim/2),1))) + mu_d
+			self.mu_qp = self.qpsolve.solve(self.z,self.z_ref,mu_d,sigDelta)
+			# self.mu_new = self.qpsolve.solve(self.z,self.z_ref,mu_d,np.ones((int(self.xdim/2),1))) + mu_d
 
-		# mu_new = mu_d + self.mu_qp 
-		# if use_qp:
-			# self.mu_new = self.qpsolve.solve(self.z,self.z_ref,mu_new,np.ones((int(self.xdim/2),1)))  + mu_new
+		mu_new = mu_d + self.mu_qp 
+		if use_qp:
+			self.mu_new = self.qpsolve.solve(self.z,self.z_ref,mu_new,np.ones((int(self.xdim/2),1)))  + mu_new
 
 		self.u_new = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (self.mu_new-self.dyn.f(self.z)))
 

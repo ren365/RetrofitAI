@@ -1,8 +1,8 @@
-prefix=/home/zehao/Desktop/ros_new/devel
+prefix=/home/zehao/Desktop/ros/RetrofitAI/devel
 
 Name: controller_adaptiveclbf
 Description: Description of controller_adaptiveclbf
 Version: 0.0.1
-Cflags: -I/home/zehao/Desktop/ros_new/devel/include
+Cflags: -I/home/zehao/Desktop/ros/RetrofitAI/devel/include
 Libs: -L${prefix}/lib 
 Requires: dynamic_reconfigure message_runtime roscpp rospy std_msgs

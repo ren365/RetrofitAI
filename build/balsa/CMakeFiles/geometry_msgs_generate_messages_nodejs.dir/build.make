@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zehao/Desktop/ros_new/src
+CMAKE_SOURCE_DIR = /home/zehao/Desktop/ros/RetrofitAI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zehao/Desktop/ros_new/build
+CMAKE_BINARY_DIR = /home/zehao/Desktop/ros/RetrofitAI/build
 
 # Utility rule file for geometry_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build: geometry_msgs
 .PHONY : balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 
 balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/zehao/Desktop/ros_new/build/balsa && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/zehao/Desktop/ros/RetrofitAI/build/balsa && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 
 balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/zehao/Desktop/ros_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zehao/Desktop/ros_new/src /home/zehao/Desktop/ros_new/src/balsa /home/zehao/Desktop/ros_new/build /home/zehao/Desktop/ros_new/build/balsa /home/zehao/Desktop/ros_new/build/balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zehao/Desktop/ros/RetrofitAI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zehao/Desktop/ros/RetrofitAI/src /home/zehao/Desktop/ros/RetrofitAI/src/balsa /home/zehao/Desktop/ros/RetrofitAI/build /home/zehao/Desktop/ros/RetrofitAI/build/balsa /home/zehao/Desktop/ros/RetrofitAI/build/balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : balsa/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 

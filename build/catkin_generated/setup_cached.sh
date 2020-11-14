@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/zehao/Desktop/ros_new/build'
+export CMAKE_PREFIX_PATH="/home/zehao/Desktop/ros/RetrofitAI/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/zehao/Desktop/ros/RetrofitAI/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/zehao/Desktop/ros/RetrofitAI/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/zehao/Desktop/ros/RetrofitAI/src:$ROS_PACKAGE_PATH"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zehao/Desktop/ros_new/src
+CMAKE_SOURCE_DIR = /home/zehao/Desktop/ros/RetrofitAI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zehao/Desktop/ros_new/build
+CMAKE_BINARY_DIR = /home/zehao/Desktop/ros/RetrofitAI/build
 
 # Utility rule file for download_extra_data.
 
@@ -67,6 +67,6 @@ CMakeFiles/download_extra_data.dir/clean:
 .PHONY : CMakeFiles/download_extra_data.dir/clean
 
 CMakeFiles/download_extra_data.dir/depend:
-	cd /home/zehao/Desktop/ros_new/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zehao/Desktop/ros_new/src /home/zehao/Desktop/ros_new/src /home/zehao/Desktop/ros_new/build /home/zehao/Desktop/ros_new/build /home/zehao/Desktop/ros_new/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zehao/Desktop/ros/RetrofitAI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zehao/Desktop/ros/RetrofitAI/src /home/zehao/Desktop/ros/RetrofitAI/src /home/zehao/Desktop/ros/RetrofitAI/build /home/zehao/Desktop/ros/RetrofitAI/build /home/zehao/Desktop/ros/RetrofitAI/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/download_extra_data.dir/depend
 

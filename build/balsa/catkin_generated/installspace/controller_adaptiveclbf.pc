@@ -1,4 +1,4 @@
-prefix=/home/zehao/Desktop/ros_new/install
+prefix=/home/zehao/Desktop/ros/RetrofitAI/install
 
 Name: controller_adaptiveclbf
 Description: Description of controller_adaptiveclbf

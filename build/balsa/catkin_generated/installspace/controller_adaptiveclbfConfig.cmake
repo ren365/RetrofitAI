@@ -67,14 +67,14 @@ set(controller_adaptiveclbf_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(controller_adaptiveclbf_SOURCE_PREFIX /home/zehao/Desktop/ros_new/src/balsa)
-  set(controller_adaptiveclbf_DEVEL_PREFIX /home/zehao/Desktop/ros_new/devel)
+  set(controller_adaptiveclbf_SOURCE_PREFIX /home/zehao/Desktop/ros/RetrofitAI/src/balsa)
+  set(controller_adaptiveclbf_DEVEL_PREFIX /home/zehao/Desktop/ros/RetrofitAI/devel)
   set(controller_adaptiveclbf_INSTALL_PREFIX "")
   set(controller_adaptiveclbf_PREFIX ${controller_adaptiveclbf_DEVEL_PREFIX})
 else()
   set(controller_adaptiveclbf_SOURCE_PREFIX "")
   set(controller_adaptiveclbf_DEVEL_PREFIX "")
-  set(controller_adaptiveclbf_INSTALL_PREFIX /home/zehao/Desktop/ros_new/install)
+  set(controller_adaptiveclbf_INSTALL_PREFIX /home/zehao/Desktop/ros/RetrofitAI/install)
   set(controller_adaptiveclbf_PREFIX ${controller_adaptiveclbf_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/zehao/Desktop/ros_new/install/lib;/home/zehao/Desktop/ros_new/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/zehao/Desktop/ros/RetrofitAI/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

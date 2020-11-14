@@ -453,103 +453,103 @@ double barrier_resolution;
 
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool enable;
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double vehicle_length;
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double steering_limit;
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double scale_acceleration;
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double acceleration_deadband;
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double acceleration_gain;
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double max_accel;
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double min_accel;
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double rate;
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool learning_verbose;
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool use_model;
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool add_data;
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool check_model;
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool model_train;
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double measurement_noise;
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int N_data;
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int N_updates;
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int meta_batch_size;
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int data_horizon;
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int test_horizon;
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int min_datapoints;
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       int save_data_interval;
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double learning_rate;
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool reverse_velocity_goal;
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool use_qp;
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double desired_vel;
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool verbose;
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double kp_z;
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double kd_z;
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double max_error;
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double kp_goal;
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double clf_epsilon;
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_u_cost;
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_u_prev_cost;
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_p1_cost;
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_p2_cost;
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_ksig;
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double qp_max_var;
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool qp_verbose;
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool use_barrier_vel;
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double max_velocity;
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double min_velocity;
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_vel_gamma;
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       bool use_barrier_pointcloud;
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_radius;
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_radius_velocity_scale;
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_pc_gamma_p;
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_pc_gamma;
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_max_distance;
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       double barrier_resolution;
 //#line 228 "/opt/ros/melodic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
@@ -700,85 +700,85 @@ adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT, adaptiveClbfCo
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("enable", "bool", 0, "Enable node operation.", "", &adaptiveClbfConfig::enable)));
 adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::VEHICLE, adaptiveClbfConfig::DEFAULT> Vehicle("Vehicle", "", 0, 1, true, &adaptiveClbfConfig::DEFAULT::vehicle);
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.vehicle_length = 0.01;
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.vehicle_length = 5.0;
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.vehicle_length = 0.4;
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("vehicle_length", "double", 0, "Vehicle Length (m)", "", &adaptiveClbfConfig::vehicle_length)));
-//#line 14 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 14 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("vehicle_length", "double", 0, "Vehicle Length (m)", "", &adaptiveClbfConfig::vehicle_length)));
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.steering_limit = 0.0;
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.steering_limit = 2.0;
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.steering_limit = 0.5;
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("steering_limit", "double", 0, "Steering Limit (?)", "", &adaptiveClbfConfig::steering_limit)));
-//#line 15 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 15 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("steering_limit", "double", 0, "Steering Limit (?)", "", &adaptiveClbfConfig::steering_limit)));
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.scale_acceleration = 0.0;
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.scale_acceleration = 100.0;
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.scale_acceleration = 0.0;
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("scale_acceleration", "double", 0, "Desired velocity gain times output acceleration.", "", &adaptiveClbfConfig::scale_acceleration)));
-//#line 16 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 16 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("scale_acceleration", "double", 0, "Desired velocity gain times output acceleration.", "", &adaptiveClbfConfig::scale_acceleration)));
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.acceleration_deadband = 0.0;
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.acceleration_deadband = 100.0;
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.acceleration_deadband = 3.0;
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("acceleration_deadband", "double", 0, "Current control deadband.", "", &adaptiveClbfConfig::acceleration_deadband)));
-//#line 17 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 17 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("acceleration_deadband", "double", 0, "Current control deadband.", "", &adaptiveClbfConfig::acceleration_deadband)));
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.acceleration_gain = 0.0;
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.acceleration_gain = 100.0;
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.acceleration_gain = 8.0;
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("acceleration_gain", "double", 0, "Desired acceleration gain to current.", "", &adaptiveClbfConfig::acceleration_gain)));
-//#line 18 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 18 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("acceleration_gain", "double", 0, "Desired acceleration gain to current.", "", &adaptiveClbfConfig::acceleration_gain)));
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.max_accel = -50.0;
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.max_accel = 50.0;
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.max_accel = 4.0;
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_accel", "double", 0, "Max Acceleration (N)", "", &adaptiveClbfConfig::max_accel)));
-//#line 19 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 19 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_accel", "double", 0, "Max Acceleration (N)", "", &adaptiveClbfConfig::max_accel)));
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.min_accel = -50.0;
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.min_accel = 50.0;
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.min_accel = -4.0;
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("min_accel", "double", 0, "Min Acceleration (N)", "", &adaptiveClbfConfig::min_accel)));
-//#line 20 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 20 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("min_accel", "double", 0, "Min Acceleration (N)", "", &adaptiveClbfConfig::min_accel)));
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.rate = 0.1;
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.rate = 100.0;
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.rate = 50.0;
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Vehicle.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("rate", "double", 0, "Controller Rate (Hz)", "", &adaptiveClbfConfig::rate)));
-//#line 21 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 21 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("rate", "double", 0, "Controller Rate (Hz)", "", &adaptiveClbfConfig::rate)));
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Vehicle.convertParams();
@@ -787,145 +787,145 @@ adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::VEHICLE, adapt
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __group_descriptions__.push_back(adaptiveClbfConfig::AbstractGroupDescriptionConstPtr(new adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::VEHICLE, adaptiveClbfConfig::DEFAULT>(Vehicle)));
 adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::LEARNING, adaptiveClbfConfig::DEFAULT> Learning("Learning", "", 0, 2, true, &adaptiveClbfConfig::DEFAULT::learning);
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.learning_verbose = 0;
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.learning_verbose = 1;
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.learning_verbose = 0;
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("learning_verbose", "bool", 0, "Enable Learning verbose mode", "", &adaptiveClbfConfig::learning_verbose)));
-//#line 24 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 24 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("learning_verbose", "bool", 0, "Enable Learning verbose mode", "", &adaptiveClbfConfig::learning_verbose)));
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.use_model = 0;
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.use_model = 1;
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.use_model = 0;
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_model", "bool", 0, "Use learned model in adaptive controller", "", &adaptiveClbfConfig::use_model)));
-//#line 25 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 25 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_model", "bool", 0, "Use learned model in adaptive controller", "", &adaptiveClbfConfig::use_model)));
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.add_data = 0;
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.add_data = 1;
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.add_data = 1;
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("add_data", "bool", 0, "Whether or not to record data for training", "", &adaptiveClbfConfig::add_data)));
-//#line 26 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 26 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("add_data", "bool", 0, "Whether or not to record data for training", "", &adaptiveClbfConfig::add_data)));
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.check_model = 0;
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.check_model = 1;
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.check_model = 1;
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("check_model", "bool", 0, "Compute training loss online", "", &adaptiveClbfConfig::check_model)));
-//#line 27 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 27 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("check_model", "bool", 0, "Compute training loss online", "", &adaptiveClbfConfig::check_model)));
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.model_train = 0;
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.model_train = 1;
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.model_train = 1;
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("model_train", "bool", 0, "Train model in adaptive controller", "", &adaptiveClbfConfig::model_train)));
-//#line 28 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 28 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("model_train", "bool", 0, "Train model in adaptive controller", "", &adaptiveClbfConfig::model_train)));
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.measurement_noise = 0.0;
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.measurement_noise = 100.0;
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.measurement_noise = 40.0;
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("measurement_noise", "double", 0, "Prior on noise for model, how much to trust model", "", &adaptiveClbfConfig::measurement_noise)));
-//#line 29 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 29 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("measurement_noise", "double", 0, "Prior on noise for model, how much to trust model", "", &adaptiveClbfConfig::measurement_noise)));
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.N_data = 1;
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.N_data = 100000;
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.N_data = 50000;
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("N_data", "int", 0, "Number of datapoints to save", "", &adaptiveClbfConfig::N_data)));
-//#line 30 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 30 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("N_data", "int", 0, "Number of datapoints to save", "", &adaptiveClbfConfig::N_data)));
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.N_updates = 1;
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.N_updates = 50000;
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.N_updates = 50;
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("N_updates", "int", 0, "Number of training updates", "", &adaptiveClbfConfig::N_updates)));
-//#line 31 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 31 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("N_updates", "int", 0, "Number of training updates", "", &adaptiveClbfConfig::N_updates)));
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.meta_batch_size = 1;
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.meta_batch_size = 1000;
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.meta_batch_size = 50;
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("meta_batch_size", "int", 0, "Meta-batch size", "", &adaptiveClbfConfig::meta_batch_size)));
-//#line 32 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 32 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("meta_batch_size", "int", 0, "Meta-batch size", "", &adaptiveClbfConfig::meta_batch_size)));
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.data_horizon = 1;
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.data_horizon = 1000;
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.data_horizon = 20;
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("data_horizon", "int", 0, "Number of context data points", "", &adaptiveClbfConfig::data_horizon)));
-//#line 33 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 33 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("data_horizon", "int", 0, "Number of context data points", "", &adaptiveClbfConfig::data_horizon)));
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.test_horizon = 1;
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.test_horizon = 1000;
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.test_horizon = 30;
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("test_horizon", "int", 0, "Number of test data points", "", &adaptiveClbfConfig::test_horizon)));
-//#line 34 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 34 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("test_horizon", "int", 0, "Number of test data points", "", &adaptiveClbfConfig::test_horizon)));
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.min_datapoints = 1;
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.min_datapoints = 100000;
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.min_datapoints = 500;
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("min_datapoints", "int", 0, "Minimum number of data points before training", "", &adaptiveClbfConfig::min_datapoints)));
-//#line 35 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 35 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("min_datapoints", "int", 0, "Minimum number of data points before training", "", &adaptiveClbfConfig::min_datapoints)));
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.save_data_interval = 1;
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.save_data_interval = 10000000;
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.save_data_interval = 10000;
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("save_data_interval", "int", 0, "Interval at which to save data", "", &adaptiveClbfConfig::save_data_interval)));
-//#line 36 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 36 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<int>("save_data_interval", "int", 0, "Interval at which to save data", "", &adaptiveClbfConfig::save_data_interval)));
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.learning_rate = 0.0;
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.learning_rate = 10.0;
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.learning_rate = 0.001;
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Learning.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("learning_rate", "double", 0, "Learning rate", "", &adaptiveClbfConfig::learning_rate)));
-//#line 37 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 37 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("learning_rate", "double", 0, "Learning rate", "", &adaptiveClbfConfig::learning_rate)));
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Learning.convertParams();
@@ -934,165 +934,165 @@ adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::LEARNING, adap
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __group_descriptions__.push_back(adaptiveClbfConfig::AbstractGroupDescriptionConstPtr(new adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::LEARNING, adaptiveClbfConfig::DEFAULT>(Learning)));
 adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::CONTROL, adaptiveClbfConfig::DEFAULT> Control("Control", "", 0, 3, true, &adaptiveClbfConfig::DEFAULT::control);
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.reverse_velocity_goal = 0;
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.reverse_velocity_goal = 1;
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.reverse_velocity_goal = 0;
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("reverse_velocity_goal", "bool", 0, "Reverse desired velocity if vehicle stops.", "", &adaptiveClbfConfig::reverse_velocity_goal)));
-//#line 40 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 40 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("reverse_velocity_goal", "bool", 0, "Reverse desired velocity if vehicle stops.", "", &adaptiveClbfConfig::reverse_velocity_goal)));
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.use_qp = 0;
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.use_qp = 1;
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.use_qp = 1;
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_qp", "bool", 0, "Use qp to optimize for controls", "", &adaptiveClbfConfig::use_qp)));
-//#line 41 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 41 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_qp", "bool", 0, "Use qp to optimize for controls", "", &adaptiveClbfConfig::use_qp)));
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.desired_vel = -100.0;
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.desired_vel = 100.0;
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.desired_vel = 0.0;
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("desired_vel", "double", 0, "Desired velocity at goal", "", &adaptiveClbfConfig::desired_vel)));
-//#line 42 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 42 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("desired_vel", "double", 0, "Desired velocity at goal", "", &adaptiveClbfConfig::desired_vel)));
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.verbose = 0;
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.verbose = 1;
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.verbose = 0;
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("verbose", "bool", 0, "Enable Controller Verbose mode", "", &adaptiveClbfConfig::verbose)));
-//#line 43 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 43 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("verbose", "bool", 0, "Enable Controller Verbose mode", "", &adaptiveClbfConfig::verbose)));
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.kp_z = 0.0;
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.kp_z = 100.0;
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.kp_z = 1.0;
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kp_z", "double", 0, "Position Gain", "", &adaptiveClbfConfig::kp_z)));
-//#line 44 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 44 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kp_z", "double", 0, "Position Gain", "", &adaptiveClbfConfig::kp_z)));
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.kd_z = 0.0;
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.kd_z = 100.0;
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.kd_z = 1.0;
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kd_z", "double", 0, "Velocity Gain", "", &adaptiveClbfConfig::kd_z)));
-//#line 45 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 45 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kd_z", "double", 0, "Velocity Gain", "", &adaptiveClbfConfig::kd_z)));
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.max_error = 0.0;
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.max_error = 1000.0;
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.max_error = 10.0;
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_error", "double", 0, "clip pd error", "", &adaptiveClbfConfig::max_error)));
-//#line 46 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 46 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_error", "double", 0, "clip pd error", "", &adaptiveClbfConfig::max_error)));
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.kp_goal = -1.0;
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.kp_goal = 10.0;
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.kp_goal = -1.0;
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kp_goal", "double", 0, "Set desired velocity proportional to distance to goal (<0 to disable)", "", &adaptiveClbfConfig::kp_goal)));
-//#line 47 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 47 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("kp_goal", "double", 0, "Set desired velocity proportional to distance to goal (<0 to disable)", "", &adaptiveClbfConfig::kp_goal)));
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.clf_epsilon = 0.001;
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.clf_epsilon = 10000.0;
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.clf_epsilon = 100.0;
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("clf_epsilon", "double", 0, "CLF Epsilon Convergence Factor", "", &adaptiveClbfConfig::clf_epsilon)));
-//#line 48 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 48 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("clf_epsilon", "double", 0, "CLF Epsilon Convergence Factor", "", &adaptiveClbfConfig::clf_epsilon)));
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_u_cost = 0.0;
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_u_cost = 10000000000.0;
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_u_cost = 100.0;
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_u_cost", "double", 0, "QP Controls Cost", "", &adaptiveClbfConfig::qp_u_cost)));
-//#line 49 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 49 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_u_cost", "double", 0, "QP Controls Cost", "", &adaptiveClbfConfig::qp_u_cost)));
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_u_prev_cost = 0.0;
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_u_prev_cost = 10000000000.0;
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_u_prev_cost = 0.0;
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_u_prev_cost", "double", 0, "QP Controls Smoothing Cost", "", &adaptiveClbfConfig::qp_u_prev_cost)));
-//#line 50 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 50 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_u_prev_cost", "double", 0, "QP Controls Smoothing Cost", "", &adaptiveClbfConfig::qp_u_prev_cost)));
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_p1_cost = 0.0;
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_p1_cost = 1e+12;
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_p1_cost = 1.0;
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_p1_cost", "double", 0, "QP Lyapunov Slack Cost", "", &adaptiveClbfConfig::qp_p1_cost)));
-//#line 51 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 51 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_p1_cost", "double", 0, "QP Lyapunov Slack Cost", "", &adaptiveClbfConfig::qp_p1_cost)));
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_p2_cost = 0.0;
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_p2_cost = 1e+12;
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_p2_cost = 1e+12;
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_p2_cost", "double", 0, "QP Barrier Slack Cost", "", &adaptiveClbfConfig::qp_p2_cost)));
-//#line 52 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 52 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_p2_cost", "double", 0, "QP Barrier Slack Cost", "", &adaptiveClbfConfig::qp_p2_cost)));
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_ksig = 0.0;
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_ksig = 10000000000.0;
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_ksig = 1.0;
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_ksig", "double", 0, "QP k_sigma Safety factor", "", &adaptiveClbfConfig::qp_ksig)));
-//#line 53 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 53 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_ksig", "double", 0, "QP k_sigma Safety factor", "", &adaptiveClbfConfig::qp_ksig)));
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_max_var = 0.0;
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_max_var = 100.0;
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_max_var = 1.0;
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_max_var", "double", 0, "QP Max Variance for sigDelta", "", &adaptiveClbfConfig::qp_max_var)));
-//#line 54 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 54 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("qp_max_var", "double", 0, "QP Max Variance for sigDelta", "", &adaptiveClbfConfig::qp_max_var)));
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.qp_verbose = 0;
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.qp_verbose = 1;
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.qp_verbose = 0;
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Control.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("qp_verbose", "bool", 0, "Enable QP Verbose mode", "", &adaptiveClbfConfig::qp_verbose)));
-//#line 55 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 55 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("qp_verbose", "bool", 0, "Enable QP Verbose mode", "", &adaptiveClbfConfig::qp_verbose)));
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Control.convertParams();
@@ -1101,115 +1101,115 @@ adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::CONTROL, adapt
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __group_descriptions__.push_back(adaptiveClbfConfig::AbstractGroupDescriptionConstPtr(new adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::CONTROL, adaptiveClbfConfig::DEFAULT>(Control)));
 adaptiveClbfConfig::GroupDescription<adaptiveClbfConfig::DEFAULT::BARRIERS, adaptiveClbfConfig::DEFAULT> Barriers("Barriers", "", 0, 4, true, &adaptiveClbfConfig::DEFAULT::barriers);
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.use_barrier_vel = 0;
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.use_barrier_vel = 1;
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.use_barrier_vel = 1;
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_barrier_vel", "bool", 0, "CBF for Velocity Enable/Disable", "", &adaptiveClbfConfig::use_barrier_vel)));
-//#line 58 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 58 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_barrier_vel", "bool", 0, "CBF for Velocity Enable/Disable", "", &adaptiveClbfConfig::use_barrier_vel)));
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.max_velocity = -100.0;
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.max_velocity = 100.0;
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.max_velocity = 5.0;
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_velocity", "double", 0, "CBF Barrier for Max Velocity", "", &adaptiveClbfConfig::max_velocity)));
-//#line 59 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 59 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("max_velocity", "double", 0, "CBF Barrier for Max Velocity", "", &adaptiveClbfConfig::max_velocity)));
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.min_velocity = -100.0;
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.min_velocity = 100.0;
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.min_velocity = 0.0;
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("min_velocity", "double", 0, "CBF Barrier for Min Velocity", "", &adaptiveClbfConfig::min_velocity)));
-//#line 60 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 60 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("min_velocity", "double", 0, "CBF Barrier for Min Velocity", "", &adaptiveClbfConfig::min_velocity)));
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_vel_gamma = 0.0;
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_vel_gamma = 10000.0;
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_vel_gamma = 100.0;
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_vel_gamma", "double", 0, "CBF Barrier gamma for Velocity", "", &adaptiveClbfConfig::barrier_vel_gamma)));
-//#line 61 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 61 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_vel_gamma", "double", 0, "CBF Barrier gamma for Velocity", "", &adaptiveClbfConfig::barrier_vel_gamma)));
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.use_barrier_pointcloud = 0;
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.use_barrier_pointcloud = 1;
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.use_barrier_pointcloud = 0;
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_barrier_pointcloud", "bool", 0, "CBF for Points on pointcloud Enable/Disable", "", &adaptiveClbfConfig::use_barrier_pointcloud)));
-//#line 62 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 62 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<bool>("use_barrier_pointcloud", "bool", 0, "CBF for Points on pointcloud Enable/Disable", "", &adaptiveClbfConfig::use_barrier_pointcloud)));
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_radius = -10.0;
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_radius = 100.0;
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_radius = 0.4;
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_radius", "double", 0, "CBF Barrier for pointcloud, min radius", "", &adaptiveClbfConfig::barrier_radius)));
-//#line 63 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 63 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_radius", "double", 0, "CBF Barrier for pointcloud, min radius", "", &adaptiveClbfConfig::barrier_radius)));
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_radius_velocity_scale = -10.0;
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_radius_velocity_scale = 100.0;
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_radius_velocity_scale = 0.2;
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_radius_velocity_scale", "double", 0, "CBF Barrier for pointcloud, scale radius by velocity", "", &adaptiveClbfConfig::barrier_radius_velocity_scale)));
-//#line 64 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 64 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_radius_velocity_scale", "double", 0, "CBF Barrier for pointcloud, scale radius by velocity", "", &adaptiveClbfConfig::barrier_radius_velocity_scale)));
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_pc_gamma_p = 0.0;
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_pc_gamma_p = 10000.0;
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_pc_gamma_p = 1.0;
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_pc_gamma_p", "double", 0, "CBF Barrier for pointcloud, gamma_p", "", &adaptiveClbfConfig::barrier_pc_gamma_p)));
-//#line 65 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 65 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_pc_gamma_p", "double", 0, "CBF Barrier for pointcloud, gamma_p", "", &adaptiveClbfConfig::barrier_pc_gamma_p)));
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_pc_gamma = 0.0;
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_pc_gamma = 10000.0;
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_pc_gamma = 10.0;
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_pc_gamma", "double", 0, "CBF Barrier for pointcloud, gamma", "", &adaptiveClbfConfig::barrier_pc_gamma)));
-//#line 66 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 66 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_pc_gamma", "double", 0, "CBF Barrier for pointcloud, gamma", "", &adaptiveClbfConfig::barrier_pc_gamma)));
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_max_distance = 0.0;
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_max_distance = 100.0;
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_max_distance = 3.0;
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_max_distance", "double", 0, "CBF Barrier max distance", "", &adaptiveClbfConfig::barrier_max_distance)));
-//#line 67 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 67 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_max_distance", "double", 0, "CBF Barrier max distance", "", &adaptiveClbfConfig::barrier_max_distance)));
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __min__.barrier_resolution = 0.0;
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __max__.barrier_resolution = 10.0;
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __default__.barrier_resolution = 0.1;
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       Barriers.abstract_parameters.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_resolution", "double", 0, "CBF Barrier resolution", "", &adaptiveClbfConfig::barrier_resolution)));
-//#line 68 "/home/zehao/Desktop/ros_new/src/balsa/cfg/adaptiveClbf.cfg"
+//#line 68 "/home/zehao/Desktop/ros/RetrofitAI/src/balsa/cfg/adaptiveClbf.cfg"
       __param_descriptions__.push_back(adaptiveClbfConfig::AbstractParamDescriptionConstPtr(new adaptiveClbfConfig::ParamDescription<double>("barrier_resolution", "double", 0, "CBF Barrier resolution", "", &adaptiveClbfConfig::barrier_resolution)));
 //#line 124 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Barriers.convertParams();

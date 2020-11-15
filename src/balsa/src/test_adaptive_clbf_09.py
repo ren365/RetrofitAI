@@ -155,7 +155,7 @@ for i in range(N-2):
 	c[0] = np.tan(c[0])/params["vehicle_length"]
 	c_qp[0] = np.tan(c_qp[0])/params["vehicle_length"]
     # change vehicle status
-	sticky_para = random.random() * 0.5
+	sticky_para = random.random() * 0.1
 	if i > N // 2:
 		if i==N//2+1:
 			print("steering_limit change to HALF")

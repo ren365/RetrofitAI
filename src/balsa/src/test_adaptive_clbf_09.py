@@ -116,7 +116,7 @@ z_d_dot = np.zeros((xdim+1,1))
 
 prediction_error = np.zeros(N)
 prediction_error_true = np.zeros(N)
-prediction_var = np.zeros((xdim/2,N))
+prediction_var = np.zeros((int(xdim/2),N))
 trGssGP = np.zeros(N)
 
 i=0

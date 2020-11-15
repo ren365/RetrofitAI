@@ -156,13 +156,11 @@ for i in range(N-2):
 	c_qp[0] = np.tan(c_qp[0])/params["vehicle_length"]
     # change vehicle status
 	sticky_para = random.random() * 0.5
-	if i == N > 2:
-		if i==N//2:
+	if i > N // 2:
+		if i==N//2+1:
 			print("steering_limit change to HALF")
 		c = [item*sticky_para if item>=0 else item*(1+sticky_para) for item in c] # sticky
-        c_qp = [item*sticky_para if item>=0 else item*(1+sticky_para) for item in c_qp] # sticky
-		# c = c * sticky_para # slipy
-        # c_qp = c_qp * sticky_para # slipy
+
     
 	z[:,i+1:i+2] = true_dyn.step(z[:,i:i+1],c,dt)
 	z_qp[:,i+1:i+2] = true_dyn.step(z_qp[:,i:i+1],c_qp,dt)

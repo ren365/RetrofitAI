@@ -96,7 +96,7 @@ t = np.linspace(0,T-2*dt,N-1)
 xdim=4
 udim=2
 
-train_interval = 40
+train_interval = 40 # original 40
 start_training = 100
 
 width = 1.0
@@ -209,10 +209,10 @@ for i in range(N-2):
 	if i > N // 2:
 		if i==N//2+1:
 			print("steering_limit change to HALF")
-		c_balsa = c_balsa * sticky_para
-		c_ad = c_ad * sticky_para
-		c_qp = c_qp * sticky_para
-		c_safety = c_safety * sticky_para
+		c_balsa = c_balsa * (1 - sticky_para)
+		c_ad = c_ad * (1 - sticky_para)
+		c_qp = c_qp * (1 - sticky_para)
+		c_safety = c_safety * (1 - sticky_para)
 
 	z_balsa[:,i+1:i+2] = true_dyn.step(z_balsa[:,i:i+1],c_balsa,dt)
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)

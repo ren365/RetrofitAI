@@ -229,10 +229,10 @@ for i in range(N-2):
 
 plt.figure()
 plt.rcParams.update({'font.size': 12})
-plt.legend(['adaptive','balsa','safety'], loc="upper center", ncol=2)
 plt.plot(t[:-1],prediction_error_ad[:-2],'k--',alpha=0.9)
 plt.plot(t[:-1],prediction_error_safety[:-2],'m-',alpha=0.9,linewidth=3.0)
 plt.plot(t[:-1],prediction_error_balsa[:-2],'g-',alpha=0.9)
+plt.legend(['adaptive','safety','balsa'])
 plt.ylabel("Prediction error")
 plt.xlabel("Time(s)")
 

@@ -131,5 +131,7 @@ class QPSolve():
             print('G_ctrl:', G_ctrl)
             print('h_ctrl:', h_ctrl)
             print('result:', mu_bar)
+            print('G_all:',self.G_csc)
+            print('h_all:',self.h)
 
         return self.mu_qp_prev

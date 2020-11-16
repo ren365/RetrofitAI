@@ -194,17 +194,27 @@ for i in range(N-2):
 	u_qp[:,i+1] = adaptive_clbf_qp.get_control(z_qp[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=True)
 
 	# dt = np.random.uniform(0.05,0.15)
-	c = copy.copy(u_balsa[:,i+1:i+2])
+	c_balsa = copy.copy(u_balsa[:,i+1:i+2])
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 	c_qp = copy.copy(u_qp[:,i+1:i+2])
 	c_safety = copy.copy(u_safety[:,i+1:i+2])
 
-	c[0] = np.tan(c[0])/params["vehicle_length"]
+	c_balsa[0] = np.tan(c_balsa[0])/params["vehicle_length"]
 	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
 	c_qp[0] = np.tan(c_qp[0])/params["vehicle_length"]
 	c_safety[0] = np.tan(c_safety[0])/params["vehicle_length"]
+	
+	# change vehicle status
+	sticky_para = random.random() * 0.1
+	if i > N // 2:
+		if i==N//2+1:
+			print("steering_limit change to HALF")
+		c_balsa = c_balsa * sticky_para
+		c_ad = c_ad * sticky_para
+		c_qp = c_qp * sticky_para
+		c_safety = c_safety * sticky_para
 
-	z_balsa[:,i+1:i+2] = true_dyn.step(z_balsa[:,i:i+1],c,dt)
+	z_balsa[:,i+1:i+2] = true_dyn.step(z_balsa[:,i:i+1],c_balsa,dt)
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
 	z_qp[:,i+1:i+2] = true_dyn.step(z_qp[:,i:i+1],c_qp,dt)
 	z_safety[:,i+1:i+2] = true_dyn.step(z_safety[:,i:i+1],c_safety,dt)

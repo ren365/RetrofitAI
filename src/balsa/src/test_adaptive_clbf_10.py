@@ -89,7 +89,7 @@ adaptive_clbf_safety.update_barrier_locations(barrier_x,barrier_y,params["barrie
 x0=np.array([[0.0],[0.0],[0.0],[0.0001]])
 z0 = true_dyn.convert_x_to_z(x0)
 
-T = 40
+T = 1 # 40
 dt = 0.1
 N = int(round(T/dt))
 t = np.linspace(0,T-2*dt,N-1)

@@ -115,7 +115,7 @@ class QPSolve():
         self.V =self.clf.V(x,x_d)
 
         # if self.verbose:
-		if True:
+        if True:
             print('z_ref: ', x.T)
             print('z_des: ', x_d.T)
             print('u_lim', self.u_lim)

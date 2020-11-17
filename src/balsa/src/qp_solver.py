@@ -201,7 +201,7 @@ class QPSolve():
 		
         G_csc = sparse.csc_matrix(G)
 		
-        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=verbose)
+        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=self.verbose)
         res = prob.solve()
 		
         mu_bar = res.x
@@ -215,7 +215,7 @@ class QPSolve():
         G_csc = sparse.csc_matrix(G)
         h = h
 		
-        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=verbose)
+        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=self.verbose)
         res = prob.solve()
 		
         mu_bar = res.x

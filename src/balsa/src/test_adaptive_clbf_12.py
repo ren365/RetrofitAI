@@ -222,9 +222,9 @@ for i in range(N-2):
 	c_safety[0] = np.tan(c_safety[0])/params["vehicle_length"]
 	
 	# change vehicle status
-	sticky_para = random.random() * 0.5
-	if i > N // 2:
-		if i==N//2+1:
+	sticky_para = random.random() * 0.3
+	if i > 235: # change the place of change N//2
+		if i==236:
 			print("steering_limit change to HALF")
 		c_balsa = c_balsa * (1 - sticky_para)
 		c_ad = c_ad * (1 - sticky_para)

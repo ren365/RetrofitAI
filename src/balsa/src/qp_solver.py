@@ -201,8 +201,8 @@ class QPSolve():
         self.prob.setup(P=self.Q, q=self.p, A=self.G_csc, l=l, u=self.h, verbose=self.verbose)
         self.res = self.prob.solve()
 		
-		mu_bar = self.res.x
-		CLF_return = np.expand_dims(mu_bar[0:int(self.xdim/2)],axis=0).T
+        mu_bar = self.res.x
+        CLF_return = np.expand_dims(mu_bar[0:int(self.xdim/2)],axis=0).T
 		
 		# G_cbf
         G = np.concatenate((G_cbf,G_ctrl),axis=0)

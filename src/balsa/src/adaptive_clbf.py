@@ -611,7 +611,7 @@ class AdaptiveClbf(object):
 
 		mu_new = mu_d + self.mu_qp 
 		if use_qp:
-			self.mu_new = self.qpsolve.solve(self.z,self.z_ref,mu_new,np.ones((int(self.xdim/2),1)))  + mu_new
+			self.mu_new,mu_CLF,mu_CBF = self.qpsolve.solve_debug(self.z,self.z_ref,mu_new,np.ones((int(self.xdim/2),1)))  + mu_new
 
 		self.u_new = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (self.mu_new-self.dyn.f(self.z)))
 
@@ -685,4 +685,14 @@ class AdaptiveClbf(object):
 		u_balsa_return[0] = np.arctan(u_balsa[0] * self.vehicle_length)
 		u_balsa_return[1] = u_balsa[1]
 		
-		return self.controls,u_pd_return,u_ad_return,u_qp_return,u_balsa_return
+		u_CLF = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_CLF-self.dyn.f(self.z)))
+		u_balsa_return = np.zeros(self.udim)
+		u_balsa_return[0] = np.arctan(u_CLF[0] * self.vehicle_length)
+		u_balsa_return[1] = u_CLF[1]
+		
+		u_CBF = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_CBF-self.dyn.f(self.z)))
+		u_balsa_return = np.zeros(self.udim)
+		u_balsa_return[0] = np.arctan(u_CBF[0] * self.vehicle_length)
+		u_balsa_return[1] = u_CBF[1]
+		
+		return self.controls,u_pd_return,u_ad_return,u_qp_return,u_balsa_return,u_CLF,u_CBF

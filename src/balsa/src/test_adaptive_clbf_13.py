@@ -181,7 +181,7 @@ for i in range(N-2):
 	else:
 		add_data = True
 	
-	if i < 100:
+	if i < 85:
 		u_balsa[:,i+1] = adaptive_clbf_balsa.get_control(z_balsa[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=True)
 	else:
 		u_balsa[:,i+1] = adaptive_clbf_balsa.get_control(z_balsa[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
@@ -193,7 +193,7 @@ for i in range(N-2):
 		prediction_var_balsa[:,i:i+1] = np.clip(adaptive_clbf_balsa.predict_var,0,params["qp_max_var"])
 		trGssGP[i] = adaptive_clbf_balsa.qpsolve.trGssGP
 
-	if i < 100:
+	if i < 85:
 		u_safety[:,i+1] = adaptive_clbf_safety.get_control(z_safety[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=True)
 	else:
 		u_safety[:,i+1],u_pd_save[:,i+1],u_ad_save[:,i+1],u_qp_save[:,i+1],u_balsa_save[:,i+1],u_clf_save[:,i+1],u_cbf_save[:,i+1] = \

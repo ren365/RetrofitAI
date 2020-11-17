@@ -205,14 +205,14 @@ for i in range(N-2):
 	c_safety[0] = np.tan(c_safety[0])/params["vehicle_length"]
 	
 	# change vehicle status
-	sticky_para = random.random() * 0.01
-	if i > N // 2:
-		if i==N//2+1:
-			print("steering_limit change to HALF")
-		c_balsa = c_balsa * (1 - sticky_para)
-		c_ad = c_ad * (1 - sticky_para)
-		c_qp = c_qp * (1 - sticky_para)
-		c_safety = c_safety * (1 - sticky_para)
+	# sticky_para = random.random() * 0.01
+	# if i > N // 2:
+		# if i==N//2+1:
+			# print("steering_limit change to HALF")
+		# c_balsa = c_balsa * (1 - sticky_para)
+		# c_ad = c_ad * (1 - sticky_para)
+		# c_qp = c_qp * (1 - sticky_para)
+		# c_safety = c_safety * (1 - sticky_para)
 
 	z_balsa[:,i+1:i+2] = true_dyn.step(z_balsa[:,i:i+1],c_balsa,dt)
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)

@@ -191,17 +191,20 @@ class QPSolve():
         mu_bar = np.zeros((self.xdim+1), dtype=np.float32)
 
         # ONLY G_dyn
+		prob = osqp.OSQP()
+        exception_called = False
+        mu_bar = np.zeros((self.xdim+1), dtype=np.float32)
+		
         G = np.concatenate((G_dyn,G_ctrl),axis=0)
         h = np.concatenate((h_dyn,h_ctrl),axis=0)
         l = np.ones(h.shape, dtype=np.float32)*np.inf * -1
 		
-        self.G_csc = sparse.csc_matrix(G)
-        self.h = h
+        G_csc = sparse.csc_matrix(G)
 		
-        self.prob.setup(P=self.Q, q=self.p, A=self.G_csc, l=l, u=self.h, verbose=self.verbose)
-        self.res = self.prob.solve()
+        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=verbose)
+        res = prob.solve()
 		
-        mu_bar = self.res.x
+        mu_bar = res.x
         CLF_return = np.expand_dims(mu_bar[0:int(self.xdim/2)],axis=0).T
 		
 		# G_cbf
@@ -209,13 +212,13 @@ class QPSolve():
         h = np.concatenate((h_cbf,h_ctrl),axis=0)
         l = np.ones(h.shape, dtype=np.float32)*np.inf * -1
 		
-        self.G_csc = sparse.csc_matrix(G)
-        self.h = h
+        G_csc = sparse.csc_matrix(G)
+        h = h
 		
-        self.prob.setup(P=self.Q, q=self.p, A=self.G_csc, l=l, u=self.h, verbose=self.verbose)
-        self.res = self.prob.solve()
+        prob.setup(P=self.Q, q=self.p, A=G_csc, l=l, u=h, verbose=verbose)
+        res = prob.solve()
 		
-        mu_bar = self.res.x
+        mu_bar = res.x
         CBF_return = np.expand_dims(mu_bar[0:int(self.xdim/2)],axis=0).T
 
 		# TRUE

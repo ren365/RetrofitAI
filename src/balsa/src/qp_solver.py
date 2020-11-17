@@ -136,7 +136,7 @@ class QPSolve():
 
         return self.mu_qp_prev
 	
-	def solve_debug(self,x,x_d,mu_d,sigDelta):
+    def solve_debug(self,x,x_d,mu_d,sigDelta):
         sigDelta = sigDelta * self.ksig
         sigDelta = np.clip(sigDelta,0.0,self.max_var)
         # sigDelta = np.ones((self.xdim/2,1)) * self.max_var # for testing

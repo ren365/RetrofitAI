@@ -208,6 +208,10 @@ class QPSolve():
         CLF_return = np.expand_dims(mu_bar[0:int(self.xdim/2)],axis=0).T
 		
 		# G_cbf
+        prob = osqp.OSQP()
+        exception_called = False
+        mu_bar = np.zeros((self.xdim+1), dtype=np.float32)
+		
         G = np.concatenate((G_cbf,G_ctrl),axis=0)
         h = np.concatenate((h_cbf,h_ctrl),axis=0)
         l = np.ones(h.shape, dtype=np.float32)*np.inf * -1

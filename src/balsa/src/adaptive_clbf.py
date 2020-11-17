@@ -665,20 +665,24 @@ class AdaptiveClbf(object):
 		self.controls[0] = np.arctan(self.u_new[0] * self.vehicle_length)
 		self.controls[1] = self.u_new[1]
 		# adding multiple return values
-		mu_pd_return = np.zeros(self.udim)
-		mu_pd_return[0] = np.arctan(mu_pd[0] * self.vehicle_length)
-		mu_pd_return[1] = mu_pd[1]
+		u_pd = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_pd-self.dyn.f(self.z)))
+		u_pd_return = np.zeros(self.udim)
+		u_pd_return[0] = np.arctan(u_pd[0] * self.vehicle_length)
+		u_pd_return[1] = u_pd[1]
 		
-		mu_ad_return = np.zeros(self.udim)
-		mu_ad_return[0] = np.arctan(mu_ad[0] * self.vehicle_length)
-		mu_ad_return[1] = mu_ad[1]
+		u_ad = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_ad-self.dyn.f(self.z)))
+		u_ad_return = np.zeros(self.udim)
+		u_ad_return[0] = np.arctan(u_ad[0] * self.vehicle_length)
+		u_ad_return[1] = u_ad[1]
 		
-		mu_qp_return = np.zeros(self.udim)
-		mu_qp_return[0] = np.arctan(self.mu_qp[0] * self.vehicle_length)
-		mu_qp_return[1] = self.mu_qp[1]
+		u_qd = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (self.mu_qp-self.dyn.f(self.z)))
+		u_qp_return = np.zeros(self.udim)
+		u_qp_return[0] = np.arctan(u_qd[0] * self.vehicle_length)
+		u_qp_return[1] = u_qd[1]
 		
-		mu_balsa_return = np.zeros(self.udim)
-		mu_balsa_return[0] = np.arctan(mu_new[0] * self.vehicle_length)
-		mu_balsa_return[1] = mu_new[1]
+		u_balsa = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_new-self.dyn.f(self.z)))
+		u_balsa_return = np.zeros(self.udim)
+		u_balsa_return[0] = np.arctan(u_balsa[0] * self.vehicle_length)
+		u_balsa_return[1] = u_balsa[1]
 		
-		return self.controls,mu_pd_return,mu_ad_return,mu_qp_return,mu_balsa_return
+		return self.controls,u_pd_return,u_ad_return,u_qp_return,u_balsa_return

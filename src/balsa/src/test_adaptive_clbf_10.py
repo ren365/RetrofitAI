@@ -163,6 +163,14 @@ bar = Bar(max=N-1)
 for i in range(N-2):
 	bar.next()
 	start = time.time()
+	# update barrier
+	# tmpindx = min(6,int(i/(N*1/2)*4)+3) # this is 2. for 3: int(i/(N*1/2)*4)+3
+	# barrier_x_tmp = barrier_x[:tmpindx]
+	# barrier_y_tmp = barrier_y[:tmpindx]
+	# adaptive_clbf_balsa.update_barrier_locations(barrier_x_tmp,barrier_y_tmp,params["barrier_radius"])
+	# adaptive_clbf_qp.update_barrier_locations(barrier_x_tmp,barrier_y_tmp,params["barrier_radius"])
+	# adaptive_clbf_safety.update_barrier_locations(barrier_x_tmp,barrier_y_tmp,params["barrier_radius"])
+	# adaptive_clbf_ad.update_barrier_locations(barrier_x_tmp,barrier_y_tmp,params["barrier_radius"])
 
 	if i < N-3:
 		z_d[:,i+2:i+3] = true_dyn.convert_x_to_z(x_d[:,i+2:i+3])

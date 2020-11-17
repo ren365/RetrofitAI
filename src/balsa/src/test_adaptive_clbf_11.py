@@ -180,7 +180,7 @@ for i in range(N-2):
 	else:
 		add_data = True
 
-	u_balsa[:,i+1] = adaptive_clbf_balsa.get_control(z_balsa[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_balsa[2,i:i+1],u_balsa[:,i]]),use_model=True,add_data=add_data,use_qp=True)
+	u_balsa[:,i+1] = adaptive_clbf_balsa.get_control(z_balsa[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
 	if (i - start_training -1 ) % train_interval == 0 and i > start_training:
 		adaptive_clbf_balsa.model.train()
 		adaptive_clbf_balsa.model_trained = True
@@ -190,7 +190,7 @@ for i in range(N-2):
 	trGssGP[i] = adaptive_clbf_balsa.qpsolve.trGssGP
 
 	u_safety[:,i+1],u_pd_save[:,i+1],u_ad_save[:,i+1],u_qp_save[:,i+1],u_balsa_save[:,i+1] = \
-		adaptive_clbf_safety.get_control_safe_debug(z_safety[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_safety[2,i:i+1],u_safety[:,i]]),use_model=True,add_data=add_data,use_qp=True)
+		adaptive_clbf_safety.get_control_safe_debug(z_safety[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
 	if (i - start_training -1 ) % train_interval == 0 and i > start_training:
 		adaptive_clbf_safety.model.train()
 		adaptive_clbf_safety.model_trained = True

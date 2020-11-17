@@ -108,6 +108,12 @@ x_d[3,:-1] = np.sqrt(np.diff(x_d[0,:])**2 + np.diff(x_d[1,:])**2)/dt
 x_d[2,-1]=x_d[2,-2]
 x_d[3,-1]=x_d[3,-2]
 
+# add recorder
+u_pd_save = np.zeros((udim,N))
+u_ad_save = np.zeros((udim,N))
+u_qp_save = np.zeros((udim,N))
+u_balsa_save = np.zeros((udim,N))
+
 u_balsa = np.zeros((udim,N))
 x_balsa = np.zeros((xdim,N-1))
 x_balsa[:,0:1] = x0
@@ -174,7 +180,8 @@ for i in range(N-2):
 	prediction_var_balsa[:,i:i+1] = np.clip(adaptive_clbf_balsa.predict_var,0,params["qp_max_var"])
 	trGssGP[i] = adaptive_clbf_balsa.qpsolve.trGssGP
 
-	u_safety[:,i+1] = adaptive_clbf_safety.get_control_safe(z_safety[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
+	u_safety[:,i+1],u_pd_save[:,i+1],u_ad_save[:,i+1],u_qp_save[:,i+1],u_balsa_save[:,i+1] = \
+		adaptive_clbf_safety.get_control_safe_debug(z_safety[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
 	if (i - start_training -1 ) % train_interval == 0 and i > start_training:
 		adaptive_clbf_safety.model.train()
 		adaptive_clbf_safety.model_trained = True
@@ -316,5 +323,30 @@ plt.plot([t[0],t[-1]],[0,0],'r--')
 plt.ylabel("Dist to barrier (m)")
 plt.xlabel("Time(s)")
 plt.savefig(r"./src/balsa/fig/fig4.png")
+
+# debug mode
+plt.figure()
+plt.rcParams.update({'font.size': 12})
+plt.subplot(211)
+plt.plot(t,u_pd_save[0,:-1],'b--',alpha=0.9)
+plt.plot(t,u_ad_save[0,:-1],'y--',alpha=0.9)
+plt.plot(t,u_qp_save[0,:-1],'k--',alpha=0.9)
+plt.plot(t,u_safety[0,:-1],'m-',alpha=0.9,linewidth=3.0)
+plt.plot(t,u_balsa_save[0,:-1],'g-',alpha=0.9)
+plt.legend(['pd','ad','qp','safety','balsa'],bbox_to_anchor=(0,1.1,1,0.2), loc="upper center", ncol=4)
+plt.plot([t[0],t[-1]],[params["steering_limit"],params["steering_limit"]],'r--')
+plt.plot([t[0],t[-1]],[-params["steering_limit"],-params["steering_limit"]],'r--')
+plt.ylabel('Steering Angle (rad)')
+plt.subplot(212)
+plt.plot(t,u_pd_save[1,:-1],'b--',alpha=0.9)
+plt.plot(t,u_ad_save[1,:-1],'y--',alpha=0.9)
+plt.plot(t,u_qp_save[1,:-1],'k--',alpha=0.9)
+plt.plot(t,u_safety[1,:-1],'m-',alpha=0.9,linewidth=3.0)
+plt.plot(t,u_balsa_save[1,:-1],'g-',alpha=0.9)
+plt.plot([t[0],t[-1]],[params["min_accel"],params["min_accel"]],'r--')
+plt.plot([t[0],t[-1]],[params["max_accel"],params["max_accel"]],'r--')
+plt.ylabel('Throttle (m/s^2)')
+plt.xlabel('Time (s)')
+plt.savefig(r"./src/balsa/fig/fig5.png")
 
 plt.show()

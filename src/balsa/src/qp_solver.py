@@ -191,7 +191,7 @@ class QPSolve():
         mu_bar = np.zeros((self.xdim+1), dtype=np.float32)
 
         # ONLY G_dyn
-		prob = osqp.OSQP()
+        prob = osqp.OSQP()
         exception_called = False
         mu_bar = np.zeros((self.xdim+1), dtype=np.float32)
 		

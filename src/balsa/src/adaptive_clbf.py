@@ -686,13 +686,13 @@ class AdaptiveClbf(object):
 		u_balsa_return[1] = u_balsa[1]
 		
 		u_CLF = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_CLF-self.dyn.f(self.z)))
-		u_balsa_return = np.zeros(self.udim)
-		u_balsa_return[0] = np.arctan(u_CLF[0] * self.vehicle_length)
-		u_balsa_return[1] = u_CLF[1]
+		u_CLF_return = np.zeros(self.udim)
+		u_CLF_return[0] = np.arctan(u_CLF[0] * self.vehicle_length)
+		u_CLF_return[1] = u_CLF[1]
 		
 		u_CBF = np.matmul(np.linalg.inv(self.dyn.g(self.z)), (mu_CBF-self.dyn.f(self.z)))
-		u_balsa_return = np.zeros(self.udim)
-		u_balsa_return[0] = np.arctan(u_CBF[0] * self.vehicle_length)
-		u_balsa_return[1] = u_CBF[1]
+		u_CBF_return = np.zeros(self.udim)
+		u_CBF_return[0] = np.arctan(u_CBF[0] * self.vehicle_length)
+		u_CBF_return[1] = u_CBF[1]
 		
-		return self.controls,u_pd_return,u_ad_return,u_qp_return,u_balsa_return,u_CLF,u_CBF
+		return self.controls,u_pd_return,u_ad_return,u_qp_return,u_balsa_return,u_CLF_return,u_CBF_return

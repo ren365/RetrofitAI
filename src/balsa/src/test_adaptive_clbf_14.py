@@ -1,5 +1,5 @@
-#! /usr/bin/env python
-import random
+#! /usr/bin/env python3
+
 import numpy as np
 import copy
 from adaptive_clbf import AdaptiveClbf
@@ -14,7 +14,7 @@ matplotlib.rcParams['ps.fonttype'] = 42
 odim = 2
 np.random.seed(0)
 adaptive_clbf = AdaptiveClbf(odim=odim, use_service = False)
-adaptive_clbf_qp = AdaptiveClbf(odim=odim, use_service = False)
+adaptive_clbf_ad = AdaptiveClbf(odim=odim, use_service = False)
 
 params={}
 params["vehicle_length"] = 0.25
@@ -62,15 +62,15 @@ params["save_data_interval"] = 10000
 true_dyn = DynamicsAckermannZModified(disturbance_scale_pos = 0.0, disturbance_scale_vel = -1.0, control_input_scale = 1.0)
 
 adaptive_clbf.update_params(params)
-adaptive_clbf_qp.update_params(params)
-
+adaptive_clbf_ad.update_params(params)
 adaptive_clbf.true_dyn = true_dyn
+adaptive_clbf_ad.true_dyn = true_dyn
 
 barrier_x = np.array([5,15,25,35,45,55])
 barrier_y = np.array([0,-0.5,0.5,-0.5,0.5,0])
 
 adaptive_clbf.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
-adaptive_clbf_qp.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
+adaptive_clbf_ad.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
 
 x0=np.array([[0.0],[0.0],[0.0],[0.0001]])
 z0 = true_dyn.convert_x_to_z(x0)
@@ -102,21 +102,20 @@ u_ad = np.zeros((udim,N))
 x_ad = np.zeros((xdim,N-1))
 x_ad[:,0:1] = x0
 
-u_qp = np.zeros((udim,N))
-x_qp = np.zeros((xdim,N-1))
-x_qp[:,0:1] = x0
-
 z_d = np.zeros((xdim+1,N-1))
 z = np.zeros((xdim+1,N-1))
 z[:,0:1] = z0
-z_qp = np.zeros((xdim+1,N-1))
-z_qp[:,0:1] = z0
+z_ad = np.zeros((xdim+1,N-1))
+z_ad[:,0:1] = z0
 
 z_d_dot = np.zeros((xdim+1,1))
 
+prediction_error_ad = np.zeros(N)
+prediction_error_true_ad = np.zeros(N)
 prediction_error = np.zeros(N)
 prediction_error_true = np.zeros(N)
 prediction_var = np.zeros((xdim/2,N))
+prediction_var_ad = np.zeros((xdim/2,N))
 trGssGP = np.zeros(N)
 
 i=0
@@ -126,8 +125,7 @@ bar = Bar(max=N-1)
 for i in range(N-2):
 	bar.next()
 	start = time.time()
-	
-	# end change status
+
 	if i < N-3:
 		z_d[:,i+2:i+3] = true_dyn.convert_x_to_z(x_d[:,i+2:i+3])
 		z_d_dot = (z_d[:,i+2:i+3] - z_d[:,i+1:i+2])/dt
@@ -146,34 +144,36 @@ for i in range(N-2):
 	prediction_var[:,i:i+1] = np.clip(adaptive_clbf.predict_var,0,params["qp_max_var"])
 	trGssGP[i] = adaptive_clbf.qpsolve.trGssGP
 
-	u_qp[:,i+1] = adaptive_clbf_qp.get_control(z_qp[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=True)
+	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_ad[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=False)
+	if (i - start_training - 1) % train_interval == 0 and i > start_training:
+		adaptive_clbf_ad.model.train()
+		adaptive_clbf_ad.model_trained = True
+	prediction_error_ad[i] = adaptive_clbf_ad.predict_error
+	prediction_error_true_ad[i] = adaptive_clbf_ad.true_predict_error
+	prediction_var_ad[:,i:i+1] = np.clip(adaptive_clbf_ad.predict_var,0,params["qp_max_var"])
 
 	# dt = np.random.uniform(0.05,0.15)
 	c = copy.copy(u[:,i+1:i+2])
-	c_qp = copy.copy(u_qp[:,i+1:i+2])
+	c_ad = copy.copy(u_ad[:,i+1:i+2])
 
 	c[0] = np.tan(c[0])/params["vehicle_length"]
-	c_qp[0] = np.tan(c_qp[0])/params["vehicle_length"]
-    # change vehicle status
-	sticky_para = random.random() * 0.5
-	if i > N // 2:
-		if i==N//2+1:
-			print("steering_limit change to HALF")
-		c = [item*sticky_para if item>=0 else item*(1+sticky_para) for item in c] # sticky
+	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
 
-    
 	z[:,i+1:i+2] = true_dyn.step(z[:,i:i+1],c,dt)
-	z_qp[:,i+1:i+2] = true_dyn.step(z_qp[:,i:i+1],c_qp,dt)
+	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
 
 	x[:,i+1:i+2] = true_dyn.convert_z_to_x(z[:,i+1:i+2])
-	x_qp[:,i+1:i+2] = true_dyn.convert_z_to_x(z_qp[:,i+1:i+2])
+	x_ad[:,i+1:i+2] = true_dyn.convert_z_to_x(z_ad[:,i+1:i+2])
 
 	print('Iteration ', i, ', Time elapsed (ms): ', (time.time() - start)*1000)
+
 
 fig = plt.figure()
 plt.rcParams.update({'font.size': 12})
 plt.plot(x_d[0,:],x_d[1,:],'k-',label='ref')
+plt.plot(x_ad[0,:],x_ad[1,:],'m--',alpha=0.9,label='ad')
 plt.plot(x_qp[0,:],x_qp[1,:],'b-',alpha=0.9,label='qp')
+plt.plot(x_pd[0,:],x_pd[1,:],'y:',alpha=0.9,label='pd')
 plt.plot(x[0,:],x[1,:],'g-',alpha=0.9,label='balsa',linewidth=3.0)
 plt.legend(bbox_to_anchor=(0,1.02,1,0.2), loc="lower center", ncol=5)
 ax = fig.gca()
@@ -182,5 +182,6 @@ for i in range(barrier_x.size):
 	ax.add_artist(circle)
 plt.xlabel('X Position')
 plt.ylabel('Y Position')
+plt.savefig('fig/presentation_14.png')
 
 plt.show()

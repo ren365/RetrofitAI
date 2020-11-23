@@ -134,8 +134,8 @@ for i in range(N-2):
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 
 	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
-	noise1 = random.random()*1.0 - 0.5
-	noise2 = random.random()*1.0 - 0.5
+	noise1 = random.random()*2.0 - 1.0
+	noise2 = random.random()*2.0 - 1.0
 	c_ad[0] += noise1
 	c_ad[1] += noise2
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)

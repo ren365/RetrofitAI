@@ -134,8 +134,8 @@ for i in range(N-2):
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 
 	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
-	noise1 = 0.5 if i%2==0 else -0.5
-	noise2 = 0.5 if i%2==0 else -0.5
+	noise1 = 1.0 if i%2==0 else -1.0
+	noise2 = 1.0 if i%2==0 else -1.0
 	c_ad[0] += noise1
 	c_ad[1] += noise2
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
@@ -161,13 +161,13 @@ plt.savefig('./src/balsa/fig/debug_171.png')
 plt.figure()
 plt.rcParams.update({'font.size': 12})
 plt.subplot(211)
-plt.plot(t,u_ad[0,:-1],'k-',alpha=0.9,linewidth=3.0)
+plt.plot(t,u_ad[0,:-1],'k-',alpha=0.9)
 plt.legend(['input','output','CBF','CLF'],bbox_to_anchor=(0,1.1,1,0.2), loc="upper center", ncol=4)
 plt.plot([t[0],t[-1]],[params["steering_limit"],params["steering_limit"]],'r--')
 plt.plot([t[0],t[-1]],[-params["steering_limit"],-params["steering_limit"]],'r--')
 plt.ylabel('Steering Angle (rad)')
 plt.subplot(212)
-plt.plot(t,u_ad[1,:-1],'k-',alpha=0.9,linewidth=3.0)
+plt.plot(t,u_ad[1,:-1],'k-',alpha=0.9)
 plt.plot([t[0],t[-1]],[params["min_accel"],params["min_accel"]],'r--')
 plt.plot([t[0],t[-1]],[params["max_accel"],params["max_accel"]],'r--')
 plt.ylabel('Throttle (m/s^2)')

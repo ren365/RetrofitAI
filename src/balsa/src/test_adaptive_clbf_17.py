@@ -126,14 +126,16 @@ bar = Bar(max=N-1)
 for i in range(N-2):
 	bar.next()
 	start = time.time()
-
-	u_ad[:,i+1] = (random.random() * 2 - 1,random.random() * 2 - 1)
+	if i < N-3:
+		z_d[:,i+2:i+3] = true_dyn.convert_x_to_z(x_d[:,i+2:i+3])
+		z_d_dot = (z_d[:,i+2:i+3] - z_d[:,i+1:i+2])/dt
+	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_pd[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=False)
 	
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 
 	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
-
-	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
+	noise = (random.random()*0.2 - 0.1,random.random()*0.2 - 0.1)
+	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad+noise,dt)
 
 	x_ad[:,i+1:i+2] = true_dyn.convert_z_to_x(z_ad[:,i+1:i+2])
 

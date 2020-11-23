@@ -129,7 +129,7 @@ for i in range(N-2):
 	if i < N-3:
 		z_d[:,i+2:i+3] = true_dyn.convert_x_to_z(x_d[:,i+2:i+3])
 		z_d_dot = (z_d[:,i+2:i+3] - z_d[:,i+1:i+2])/dt
-	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_pd[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=False)
+	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_ad[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=False)
 	
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 

@@ -178,7 +178,7 @@ for i in range(N-2):
 fig = plt.figure()
 plt.rcParams.update({'font.size': 12})
 plt.plot(x_d[0,:],x_d[1,:],'k--',label='ref')
-plt.plot(x[0,:],x[1,:],'g-'label='safety',linewidth=3.0)
+plt.plot(x[0,:],x[1,:],'g-',label='safety',linewidth=3.0)
 plt.legend(bbox_to_anchor=(0,1.02,1,0.2), loc="lower center", ncol=5)
 ax = fig.gca()
 for i in range(barrier_x.size):

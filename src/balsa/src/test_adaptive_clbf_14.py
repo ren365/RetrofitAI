@@ -114,8 +114,8 @@ prediction_error_ad = np.zeros(N)
 prediction_error_true_ad = np.zeros(N)
 prediction_error = np.zeros(N)
 prediction_error_true = np.zeros(N)
-prediction_var = np.zeros((xdim/2,N))
-prediction_var_ad = np.zeros((xdim/2,N))
+prediction_var = np.zeros((xdim//2,N))
+prediction_var_ad = np.zeros((xdim//2,N))
 trGssGP = np.zeros(N)
 
 i=0

@@ -8,6 +8,7 @@ from progress.bar import Bar
 import time
 import matplotlib
 import matplotlib.pyplot as plt
+import random
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 
@@ -66,8 +67,8 @@ adaptive_clbf_ad.update_params(params)
 adaptive_clbf.true_dyn = true_dyn
 adaptive_clbf_ad.true_dyn = true_dyn
 
-barrier_x = np.array([])
-barrier_y = np.array([])
+barrier_x = np.array([5,15,25,35,45,55])
+barrier_y = np.array([0,-0.5,0.5,-0.5,0.5,0])
 
 adaptive_clbf.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
 adaptive_clbf_ad.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
@@ -126,43 +127,14 @@ for i in range(N-2):
 	bar.next()
 	start = time.time()
 
-	if i < N-3:
-		z_d[:,i+2:i+3] = true_dyn.convert_x_to_z(x_d[:,i+2:i+3])
-		z_d_dot = (z_d[:,i+2:i+3] - z_d[:,i+1:i+2])/dt
-
-	if i == 0:
-		add_data = False
-	else:
-		add_data = True
-
-	u[:,i+1] = adaptive_clbf.get_control_safe(z[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=True)
-	if (i - start_training -1 ) % train_interval == 0 and i > start_training:
-		adaptive_clbf.model.train()
-		adaptive_clbf.model_trained = True
-	prediction_error[i] = adaptive_clbf.predict_error
-	prediction_error_true[i] = adaptive_clbf.true_predict_error
-	prediction_var[:,i:i+1] = np.clip(adaptive_clbf.predict_var,0,params["qp_max_var"])
-	trGssGP[i] = adaptive_clbf.qpsolve.trGssGP
-
-	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_ad[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=False)
-	if (i - start_training - 1) % train_interval == 0 and i > start_training:
-		adaptive_clbf_ad.model.train()
-		adaptive_clbf_ad.model_trained = True
-	prediction_error_ad[i] = adaptive_clbf_ad.predict_error
-	prediction_error_true_ad[i] = adaptive_clbf_ad.true_predict_error
-	prediction_var_ad[:,i:i+1] = np.clip(adaptive_clbf_ad.predict_var,0,params["qp_max_var"])
-
-	# dt = np.random.uniform(0.05,0.15)
-	c = copy.copy(u[:,i+1:i+2])
+	u_ad[:,i+1] = (random.random() * 2 - 1,random.random() * 2 - 1)
+	
 	c_ad = copy.copy(u_ad[:,i+1:i+2])
 
-	c[0] = np.tan(c[0])/params["vehicle_length"]
 	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
 
-	z[:,i+1:i+2] = true_dyn.step(z[:,i:i+1],c,dt)
 	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
 
-	x[:,i+1:i+2] = true_dyn.convert_z_to_x(z[:,i+1:i+2])
 	x_ad[:,i+1:i+2] = true_dyn.convert_z_to_x(z_ad[:,i+1:i+2])
 
 	print('Iteration ', i, ', Time elapsed (ms): ', (time.time() - start)*1000)
@@ -171,10 +143,7 @@ for i in range(N-2):
 fig = plt.figure()
 plt.rcParams.update({'font.size': 12})
 plt.plot(x_d[0,:],x_d[1,:],'k-',label='ref')
-plt.plot(x_ad[0,:],x_ad[1,:],'m--',alpha=0.9,label='ad')
-plt.plot(x_qp[0,:],x_qp[1,:],'b-',alpha=0.9,label='qp')
-plt.plot(x_pd[0,:],x_pd[1,:],'y:',alpha=0.9,label='pd')
-plt.plot(x[0,:],x[1,:],'g-',alpha=0.9,label='balsa',linewidth=3.0)
+plt.plot(x_ad[0,:],x_ad[1,:],'m--',label='ad')
 plt.legend(bbox_to_anchor=(0,1.02,1,0.2), loc="lower center", ncol=5)
 ax = fig.gca()
 for i in range(barrier_x.size):
@@ -182,6 +151,22 @@ for i in range(barrier_x.size):
 	ax.add_artist(circle)
 plt.xlabel('X Position')
 plt.ylabel('Y Position')
-plt.savefig('./src/balsa/fig/presentation_15.png')
+plt.savefig('./src/balsa/fig/debug_171.png')
+
+plt.figure()
+plt.rcParams.update({'font.size': 12})
+plt.subplot(211)
+plt.plot(t,u_clf_save[0,:-1],'k-',alpha=0.9,linewidth=3.0)
+plt.legend(['input','output','CBF','CLF'],bbox_to_anchor=(0,1.1,1,0.2), loc="upper center", ncol=4)
+plt.plot([t[0],t[-1]],[params["steering_limit"],params["steering_limit"]],'r--')
+plt.plot([t[0],t[-1]],[-params["steering_limit"],-params["steering_limit"]],'r--')
+plt.ylabel('Steering Angle (rad)')
+plt.subplot(212)
+plt.plot(t,u_clf_save[1,:-1],'k-',alpha=0.9,linewidth=3.0)
+plt.plot([t[0],t[-1]],[params["min_accel"],params["min_accel"]],'r--')
+plt.plot([t[0],t[-1]],[params["max_accel"],params["max_accel"]],'r--')
+plt.ylabel('Throttle (m/s^2)')
+plt.xlabel('Time (s)')
+plt.savefig(r"./src/balsa/fig/debug_172.png")
 
 plt.show()

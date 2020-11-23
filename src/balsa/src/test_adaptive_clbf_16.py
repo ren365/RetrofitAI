@@ -189,6 +189,6 @@ for i in range(barrier_x.size):
 	ax.add_artist(circle)
 plt.xlabel('X Position')
 plt.ylabel('Y Position')
-plt.savefig('fig/presentation_16.png')
+plt.savefig('./src/balsa/fig/presentation_16.png')
 
 plt.show()

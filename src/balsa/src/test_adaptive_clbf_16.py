@@ -177,11 +177,8 @@ for i in range(N-2):
 
 fig = plt.figure()
 plt.rcParams.update({'font.size': 12})
-plt.plot(x_d[0,:],x_d[1,:],'k-',label='ref')
-plt.plot(x_ad[0,:],x_ad[1,:],'m--',alpha=0.9,label='ad')
-plt.plot(x_qp[0,:],x_qp[1,:],'b-',alpha=0.9,label='qp')
-plt.plot(x_pd[0,:],x_pd[1,:],'y:',alpha=0.9,label='pd')
-plt.plot(x[0,:],x[1,:],'g-',alpha=0.9,label='balsa',linewidth=3.0)
+plt.plot(x_d[0,:],x_d[1,:],'k--',label='ref')
+plt.plot(x[0,:],x[1,:],'g-'label='safety',linewidth=3.0)
 plt.legend(bbox_to_anchor=(0,1.02,1,0.2), loc="lower center", ncol=5)
 ax = fig.gca()
 for i in range(barrier_x.size):

@@ -15,6 +15,8 @@ odim = 2
 np.random.seed(0)
 adaptive_clbf = AdaptiveClbf(odim=odim, use_service = False)
 adaptive_clbf_qp = AdaptiveClbf(odim=odim, use_service = False)
+adaptive_clbf_ad = AdaptiveClbf(odim=odim, use_service = False)
+adaptive_clbf_pd = AdaptiveClbf(odim=odim, use_service = False)
 
 params={}
 params["vehicle_length"] = 0.25
@@ -45,6 +47,14 @@ params["verbose"] = False
 params["dt"] = 0.1
 params["max_error"] = 10.0
 
+# alpaca params
+# params["qp_ksig"] = 2.0e3
+# params["measurement_noise"] = 1.0e-3
+
+# gp params
+# params["qp_ksig"] = 1.0e5
+# params["measurement_noise"] = 1.0
+
 # vanilla nn params
 params["qp_ksig"] = 1.0e2
 params["measurement_noise"] = 1.0
@@ -63,14 +73,21 @@ true_dyn = DynamicsAckermannZModified(disturbance_scale_pos = 0.0, disturbance_s
 
 adaptive_clbf.update_params(params)
 adaptive_clbf_qp.update_params(params)
-
+adaptive_clbf_ad.update_params(params)
+adaptive_clbf_pd.update_params(params)
 adaptive_clbf.true_dyn = true_dyn
+adaptive_clbf_ad.true_dyn = true_dyn
 
 barrier_x = np.array([5,15,25,35,45,55])
 barrier_y = np.array([0,-0.5,0.5,-0.5,0.5,0])
-
+# barrier_x = np.linspace(0,1,100)
+# barrier_y = np.linspace(0,1,100)
+# barrier_x = np.array([])
+# barrier_y = np.array([])
 adaptive_clbf.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
 adaptive_clbf_qp.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
+adaptive_clbf_ad.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
+adaptive_clbf_pd.update_barrier_locations(barrier_x,barrier_y,params["barrier_radius"])
 
 x0=np.array([[0.0],[0.0],[0.0],[0.0001]])
 z0 = true_dyn.convert_x_to_z(x0)
@@ -98,25 +115,36 @@ u = np.zeros((udim,N))
 x = np.zeros((xdim,N-1))
 x[:,0:1] = x0
 
-u_ad = np.zeros((udim,N))
-x_ad = np.zeros((xdim,N-1))
-x_ad[:,0:1] = x0
-
 u_qp = np.zeros((udim,N))
 x_qp = np.zeros((xdim,N-1))
 x_qp[:,0:1] = x0
+
+u_pd = np.zeros((udim,N))
+x_pd = np.zeros((xdim,N-1))
+x_pd[:,0:1] = x0
+
+u_ad = np.zeros((udim,N))
+x_ad = np.zeros((xdim,N-1))
+x_ad[:,0:1] = x0
 
 z_d = np.zeros((xdim+1,N-1))
 z = np.zeros((xdim+1,N-1))
 z[:,0:1] = z0
 z_qp = np.zeros((xdim+1,N-1))
 z_qp[:,0:1] = z0
+z_pd = np.zeros((xdim+1,N-1))
+z_pd[:,0:1] = z0
+z_ad = np.zeros((xdim+1,N-1))
+z_ad[:,0:1] = z0
 
 z_d_dot = np.zeros((xdim+1,1))
 
+prediction_error_ad = np.zeros(N)
+prediction_error_true_ad = np.zeros(N)
 prediction_error = np.zeros(N)
 prediction_error_true = np.zeros(N)
 prediction_var = np.zeros((xdim//2,N))
+prediction_var_ad = np.zeros((xdim//2,N))
 trGssGP = np.zeros(N)
 
 i=0
@@ -145,20 +173,38 @@ for i in range(N-2):
 	prediction_var[:,i:i+1] = np.clip(adaptive_clbf.predict_var,0,params["qp_max_var"])
 	trGssGP[i] = adaptive_clbf.qpsolve.trGssGP
 
+	u_ad[:,i+1] = adaptive_clbf_ad.get_control(z_ad[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=np.concatenate([x_ad[2,i:i+1],u_ad[:,i]]),use_model=True,add_data=add_data,use_qp=False)
+	if (i - start_training - 1) % train_interval == 0 and i > start_training:
+		adaptive_clbf_ad.model.train()
+		adaptive_clbf_ad.model_trained = True
+	prediction_error_ad[i] = adaptive_clbf_ad.predict_error
+	prediction_error_true_ad[i] = adaptive_clbf_ad.true_predict_error
+	prediction_var_ad[:,i:i+1] = np.clip(adaptive_clbf_ad.predict_var,0,params["qp_max_var"])
+
 	u_qp[:,i+1] = adaptive_clbf_qp.get_control(z_qp[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=True)
+
+	u_pd[:,i+1] = adaptive_clbf_pd.get_control(z_pd[:,i:i+1],z_d[:,i+1:i+2],z_d_dot,dt=dt,obs=[],use_model=False,add_data=False,use_qp=False)
 
 	# dt = np.random.uniform(0.05,0.15)
 	c = copy.copy(u[:,i+1:i+2])
+	c_ad = copy.copy(u_ad[:,i+1:i+2])
 	c_qp = copy.copy(u_qp[:,i+1:i+2])
+	c_pd = copy.copy(u_pd[:,i+1:i+2])
 
 	c[0] = np.tan(c[0])/params["vehicle_length"]
+	c_ad[0] = np.tan(c_ad[0])/params["vehicle_length"]
 	c_qp[0] = np.tan(c_qp[0])/params["vehicle_length"]
+	c_pd[0] = np.tan(c_pd[0])/params["vehicle_length"]
 
 	z[:,i+1:i+2] = true_dyn.step(z[:,i:i+1],c,dt)
+	z_ad[:,i+1:i+2] = true_dyn.step(z_ad[:,i:i+1],c_ad,dt)
 	z_qp[:,i+1:i+2] = true_dyn.step(z_qp[:,i:i+1],c_qp,dt)
+	z_pd[:,i+1:i+2] = true_dyn.step(z_pd[:,i:i+1],c_pd,dt)
 
 	x[:,i+1:i+2] = true_dyn.convert_z_to_x(z[:,i+1:i+2])
+	x_ad[:,i+1:i+2] = true_dyn.convert_z_to_x(z_ad[:,i+1:i+2])
 	x_qp[:,i+1:i+2] = true_dyn.convert_z_to_x(z_qp[:,i+1:i+2])
+	x_pd[:,i+1:i+2] = true_dyn.convert_z_to_x(z_pd[:,i+1:i+2])
 
 	print('Iteration ', i, ', Time elapsed (ms): ', (time.time() - start)*1000)
 
